@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.island.jprotobuf.rpc.demo</groupId>
+		<artifactId>Jprotobuf-rpc-demo</artifactId>
+		<version>${demo.version}</version>
+	</parent>
+	<artifactId>Jprotobuf-rpc-demo-client</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.island.jprotobuf.rpc.demo</groupId>
+			<artifactId>Jprotobuf-rpc-demo-dto</artifactId>
+			<version>${demo.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.island.jprotobuf.rpc.demo</groupId>
+			<artifactId>Jprotobuf-rpc-demo-service</artifactId>
+			<version>${demo.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.island.jprotobuf.rpc.demo</groupId>
+			<artifactId>Jprotobuf-rpc-demo-common</artifactId>
+			<version>${demo.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>Jprotobuf-rpc-demo-client</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.1.1</version>
+					<configuration>
+						<attachClasses>true</attachClasses>
+						<classesClassifier>classes</classesClassifier>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<packaging>war</packaging>
+</project>

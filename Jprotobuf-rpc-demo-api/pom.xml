@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.island.jprotobuf.rpc.demo</groupId>
+		<artifactId>Jprotobuf-rpc-demo</artifactId>
+		<version>${demo.version}</version>
+	</parent>
+	<artifactId>Jprotobuf-rpc-demo-api</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.island.jprotobuf.rpc.demo</groupId>
+			<artifactId>Jprotobuf-rpc-demo-dto</artifactId>
+			<version>${demo.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.island.jprotobuf.rpc.demo</groupId>
+			<artifactId>Jprotobuf-rpc-demo-service</artifactId>
+			<version>${demo.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.island.jprotobuf.rpc.demo</groupId>
+			<artifactId>Jprotobuf-rpc-demo-facade</artifactId>
+			<version>${demo.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.island.jprotobuf.rpc.demo</groupId>
+			<artifactId>Jprotobuf-rpc-demo-common</artifactId>
+			<version>${demo.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>Jprotobuf-rpc-demo-api</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<attachClasses>true</attachClasses>
+					<classesClassifier>classes</classesClassifier>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
+	<profiles>
+		<profile>
+			<id>develop</id>
+			<properties>
+				<package.environment>develop</package.environment>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources/</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<!-- <profile> <id>product</id> <properties> <package.environment>product</package.environment> 
+			</properties> <build> <resources> <resource> <directory>src/main/resources/product</directory> 
+			</resource> </resources> </build> </profile> -->
+	</profiles>
+
+	<packaging>war</packaging>
+</project>

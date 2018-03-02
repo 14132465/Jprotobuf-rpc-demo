@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.island.jprotobuf.rpc.demo</groupId>
+    <artifactId>Jprotobuf-rpc-demo</artifactId>
+    <version>${demo.version}</version>
+  </parent>
+  <artifactId>Jprotobuf-rpc-demo-facade</artifactId>
+  
+  	<dependencies>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.island.jprotobuf.rpc.demo</groupId> -->
+<!-- 			<artifactId>Jprotobuf-rpc-demo-dto</artifactId> -->
+<!-- 			<version>${demo.version}</version> -->
+<!-- 		</dependency> -->
+
+	</dependencies>
+  
+</project>
