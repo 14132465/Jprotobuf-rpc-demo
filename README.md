@@ -34,6 +34,7 @@ HelloWorldServiceTest.testHelloWorldService()
 (4). On linux, you can check if the rpc service running by command:<br>
 ```
 lsof -i:1033
+netstat -tunlp | grep 8150
 ```
 If you see something like:<br>
 ```
