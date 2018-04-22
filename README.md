@@ -26,6 +26,12 @@ Here is the logic picture.<br>
 ```
 mvn clean -Pdevelop package
 ```
+
+You can add the flowing command behind to skip tests
+```
+-Dmaven.test.skip=true 
+```
+
 (2). Deploy the Jprotobuf-rpc-demo-api.war into the ROOT of tomcat.<br>
 (3). Run the test case under the module: Jprotobuf-rpc-demo-facade called:<br>
 ```
